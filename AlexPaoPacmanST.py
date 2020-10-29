@@ -9,6 +9,9 @@ writer = Turtle(visible=False)
 aim = vector(5, 0)
 pacman = vector(-40, -80)
 
+"""
+Aquí los fantasmas se vuelven más rapido cambiandoles el valor de los vectores
+"""
 ghosts = [
     [vector(-180, 160), vector(10, 0)],
     [vector(-180, -160), vector(0, 10)],
@@ -39,6 +42,9 @@ tiles = [
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
 ]
+"""
+Aqui se llevo acabo el inciso 1 en el cual se cambio el tablero.
+"""
 
 def square(x, y):
     "Draw square using path at (x, y)."
@@ -119,7 +125,10 @@ def move():
                     vector(0, 10),
                     vector(0, -10),
                 ]
-    
+    """
+    En esta parte del programa se empieza a cambiar el rumbo de los fantasmas
+    para que sean más "inteligentes"
+    """
     for point, course in ghosts:
         if pacman.y == point.y :
 
